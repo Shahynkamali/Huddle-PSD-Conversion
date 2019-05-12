@@ -1,0 +1,32 @@
+.box{
+    @include column;
+    border:$border;
+    align-items: center;
+    .box_tryout{
+        border:$border;
+        width:45%;
+        padding:20px 10px;
+        background:white;
+        text-align: center;
+        .box_tryout_title,
+        .box_tryout_paragraph{
+            padding:10px 20px;
+            h3{
+                text-transform: capitalize;
+                font-family: $font_one;
+            }   
+        }
+        .box_tryout_paragraph{
+            p{
+                font-family: $font_two;
+                color:grey;
+            }
+
+        }
+        .center_text_button{
+            button{
+                @include pink_button;
+            }
+        }
+    }
+}

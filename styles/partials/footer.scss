@@ -1,0 +1,28 @@
+footer{
+    background:$color_primary;
+    color:white;
+    @include column;
+    .logo{
+        border:$border;
+    }
+    .sections{
+        @include row;
+        .section_social,
+        .section_about,
+        .section_subscribe{
+            width:calc(100% /3);
+        }
+        .section_social{
+            @include column;
+            .section_social_icons{
+                @include row;
+                justify-content: flex-start
+            }
+        }
+        .section_about{
+            @include row;
+            justify-content: space-around
+        }
+    }
+
+}

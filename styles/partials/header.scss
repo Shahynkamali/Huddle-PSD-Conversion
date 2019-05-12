@@ -1,0 +1,65 @@
+header{
+    border:1px solid red;
+    .info{
+        border:1px solid black;
+        @include row;
+        justify-content: space-between;
+        align-items: center;
+        .info_logo{
+            width:20%;
+            border:1px solid red;
+            margin:20px;
+            img{
+                width:100%;
+            }
+        }
+        .info_button{
+            align-items: center;
+            button{
+                padding:10px 60px;
+                margin:20px;
+                background: white;
+                border:none;
+                color:purple;
+                
+            }
+        }
+    }
+    .center{
+        @include column;
+        align-items: center;
+        .center_image{
+            width:60%;
+            img{
+                width:100%;
+            }
+        }
+        .center_text{
+            border:1px solid red;
+            width:80%;
+            .center_text_title,
+            .center_text_paragraph,
+            .center_text_button{
+                text-align: center;
+            }
+
+            .center_text_title{
+                font-family: $font_one;
+                text-transform: capitalize;
+                font-size:1rem;
+            }
+            .center_text_paragraph{
+                font-family: $font_two;
+                font-size:0.9rem;
+                color:grey;
+            }
+            .center_text_button{
+                margin:10px;
+                border: $border;
+                button{
+                    @include pink_button
+                }
+            }
+        }
+    }
+}

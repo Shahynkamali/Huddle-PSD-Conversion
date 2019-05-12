@@ -1,0 +1,36 @@
+.description{
+    @include row;
+    .description_image,
+    .description_column{
+        border:$border;
+        @include column;
+        justify-content: space-around;
+        width:50%;
+        img{
+            width:100%;
+        }
+        .description_column_text{
+            border:$border;
+            .description_column_text_title,
+            .description_column_text_paragraph{
+                text-align:left;
+                border:$border;
+            }
+            .description_column_text_title{
+                h2{
+                    text-transform: capitalize;
+                    font-family: $font_one;
+                    font-size:1.4rem;
+                }
+            }
+            .description_column_text_paragraph{
+                p{
+                    font-family:$font_two;
+                    font-size: 1rem;
+                }
+            }
+            
+        }
+    }
+
+}
