@@ -5,10 +5,10 @@ header{
         align-items: center;
         .info_logo{
             width:20%;
-            @include mobile{
-                width: 30%;
-            }
             margin:20px;
+                @include mobile{
+                    width: 30%;
+                }
             img{
                 width:100%;
             }

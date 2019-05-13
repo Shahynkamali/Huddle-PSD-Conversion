@@ -24,8 +24,10 @@ $color_background: #f2f5f9;
     border-radius: 5px;
 }
 
+$mobile: 700px;
+
 @mixin mobile {
-    @media (max-width:700px) {
+    @media (max-width: #{$mobile}) {
         @content;
     }
 }
