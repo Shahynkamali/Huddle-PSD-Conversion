@@ -1,20 +1,38 @@
 .description{
+    background:#F6F6F6;
     @include row;
+    padding:100px 0;
+    @include mobile {
+        @include column;
+        align-items: center;
+        padding:0;
+    }
     .description_image,
     .description_column{
-        border:$border;
+        .description_column_text{
+            @include mobile {
+            margin:5px 0;
+            }
+        }
         @include column;
         justify-content: space-around;
-        width:50%;
+        width:calc(50% - 80px);
+        margin: 0 40px;
+        @include mobile {
+            width: 90%;
+            padding:100px 0;
+        }
         img{
             width:100%;
         }
         .description_column_text{
-            border:$border;
             .description_column_text_title,
             .description_column_text_paragraph{
                 text-align:left;
-                border:$border;
+                padding:10px 0;
+                @include mobile {
+                    text-align: center;
+                }
             }
             .description_column_text_title{
                 h2{
@@ -27,10 +45,9 @@
                 p{
                     font-family:$font_two;
                     font-size: 1rem;
+                    color:grey;
                 }
             }
-            
         }
     }
-
 }

@@ -3,11 +3,15 @@
     width:100%;
     margin:0 auto;
     @include column;
-    background-color: $color_background;
+    background:#F6F6F6;
     align-items: center;
     .wrapper{
         max-width: 1200px;
         width:100%;
-        border:$border;
     }
+}
+.background{
+    background: url('../images/background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }

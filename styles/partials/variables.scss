@@ -3,7 +3,6 @@ $font_two:'Roboto', 'sans-serif';
 $color_accent: #FF53C1;
 $color_primary:#082932;
 $color_background: #f2f5f9;
-$border: 1px solid black;
 
 @mixin row {
     display: flex;
@@ -22,8 +21,13 @@ $border: 1px solid black;
     padding:10px 40px;
     color:white;
     margin:10px 20px;
+    border-radius: 5px;
 }
 
-
+@mixin mobile {
+    @media (max-width:700px) {
+        @content;
+    }
+}
 
 

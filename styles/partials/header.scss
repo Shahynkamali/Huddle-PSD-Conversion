@@ -1,13 +1,13 @@
 header{
-    border:1px solid red;
     .info{
-        border:1px solid black;
         @include row;
         justify-content: space-between;
         align-items: center;
         .info_logo{
             width:20%;
-            border:1px solid red;
+            @include mobile{
+                width: 30%;
+            }
             margin:20px;
             img{
                 width:100%;
@@ -16,46 +16,65 @@ header{
         .info_button{
             align-items: center;
             button{
-                padding:10px 60px;
+                padding:15px 60px;
                 margin:20px;
                 background: white;
                 border:none;
                 color:purple;
-                
+                text-transform: capitalize;
+                font-family: $font_one;
+                font-size: 1rem;
+                @include mobile {
+                    font-size: 0.8rem;
+                    padding: 15px 22px;
+                }
             }
         }
     }
     .center{
         @include column;
         align-items: center;
+        padding-bottom: 400px;
         .center_image{
+            margin:30px 0;
             width:60%;
+            @include mobile{
+                width: 90%;
+            }
             img{
                 width:100%;
             }
         }
         .center_text{
-            border:1px solid red;
+            @include column;
+            align-items: center;
             width:80%;
+            @include mobile {
+                width: 90%;
+            }
             .center_text_title,
             .center_text_paragraph,
             .center_text_button{
                 text-align: center;
             }
-
             .center_text_title{
                 font-family: $font_one;
                 text-transform: capitalize;
-                font-size:1rem;
+                font-size:0.8rem;
             }
             .center_text_paragraph{
                 font-family: $font_two;
-                font-size:0.9rem;
+                padding:10px 0;
+                width: 60%;
+                @include mobile {
+                    width: 90%;
+                }
+                font-size:0.8rem;
+                line-height: 30px;
                 color:grey;
             }
             .center_text_button{
                 margin:10px;
-                border: $border;
                 button{
                     @include pink_button
                 }
